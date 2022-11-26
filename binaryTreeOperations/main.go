@@ -29,4 +29,6 @@ func main() {
 	fmt.Println("Deleting 6...")
 	tree.Delete(6)
 	fmt.Printf("Result from search for 6 is : %t\n", tree.Search(6))
+
+	fmt.Printf("\nHeight of the tree : %d", tree.Height())
 }

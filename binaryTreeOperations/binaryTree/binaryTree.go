@@ -144,3 +144,22 @@ func (tree *Tree) deleteRec(root *Node, value int) *Node {
 	}
 	return root
 }
+
+func max(a int, b int) int {
+	if a > b {
+		return a
+	}
+	return b
+}
+
+func (tree *Tree) Height() int {
+	return tree.getHeight(tree.root)
+}
+
+func (tree *Tree) getHeight(root *Node) int {
+	if root == nil {
+		return 0
+	}
+
+	return 1 + max(tree.getHeight(root.left), tree.getHeight(root.right))
+}
